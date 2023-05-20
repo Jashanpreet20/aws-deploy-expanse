@@ -14,7 +14,7 @@ function isStringvalid(string)
 
     const generatetoken=(userid,name,ispremiumuser) =>
 {
-    const secretkey='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgxNDc1ODQ3fQ.eG_h3bUVgb57y6b4rw1PlKslungzCM23kHkof0hLy4k';
+    const secretkey=process.env.SECRET_KEY;
     return jwt.sign({ id:userid, name:name, ispremiumuser} , secretkey); 
 }
 

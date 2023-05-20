@@ -9,6 +9,7 @@ const compression=require('compression');
 const morgan=require('morgan');
 const app=express();
 
+
 const user=require('./models/user');
 const expanse=require('./models/expanse');
 const order=require('./models/orders');
@@ -16,9 +17,9 @@ const forgotpassword=require('./models/forgotpassword');
 const fileUrl=require('./models/fileUrl');
 
 // get config vars and you will declare before util database otherwise you will get error like access denied
+
+
 dotenv.config();
-
-
 const sequelize=require('./util/database');
 const purchaseroutes=require('./routes/purchase');
 const expanseroutes=require('./routes/expanse');
@@ -26,7 +27,7 @@ const adminroutes=require('./routes/admin');
 const forgetroutes=require('./routes/forget');
 const premiumfeatureroutes=require('./routes/premiumfeature');
 const body=require('body-parser');
-const cors=require('cors');
+ const cors=require('cors');
 
 
 
@@ -42,7 +43,7 @@ path.join(__dirname,'access log'),
 app.use(express.json()); 
 app.use(helmet());
 app.use(compression());
-app.use(morgan('combined',{stream:accessdatastream}));
+//app.use(morgan('combined',{stream:accessdatastream}));
 
 //Association
 
